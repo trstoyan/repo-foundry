@@ -57,3 +57,7 @@ promote the stable ones into template assets.
 5. Add validation when a rule is important enough to enforce.
 
 The starting tour method is in `docs/repo-tour-plan.md`.
+
+## License
+
+MIT License. See `LICENSE`.
