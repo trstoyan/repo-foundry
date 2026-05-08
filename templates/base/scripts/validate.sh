@@ -22,3 +22,5 @@ if [[ -n "$legacy_files" ]]; then
   echo "$legacy_files" >&2
   exit 1
 fi
+
+echo "Base structural validation passed."

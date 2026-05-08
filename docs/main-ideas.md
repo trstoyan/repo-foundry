@@ -15,19 +15,27 @@ A new project should explain how an agent can safely work in it:
 
 The canonical file for that contract is `AGENTS.md`.
 
-## 2. Templates Should Be Evidence-Based
+## 2. Planning Is The First Safety Gate
+
+Agents should not implement from a raw idea. A project should pass through an
+idea brief, project plan, risk profile, profile selection, accepted slices, and
+agent context before non-trivial implementation begins.
+
+The smallest safe implementation unit is an accepted slice.
+
+## 3. Templates Should Be Evidence-Based
 
 Rules become universal only after they prove useful across real projects. A
 single project can inspire a pattern, but repeated evidence should decide
 whether it belongs in the base template.
 
-## 3. Validation Beats Memory
+## 4. Validation Beats Memory
 
 Important conventions should eventually become checks, scripts, or CI jobs.
 Documentation explains why a rule exists; validation helps make sure it keeps
 working.
 
-## 4. Use Profiles, Not One Giant Template
+## 5. Use Profiles, Not One Giant Template
 
 The base template should stay small. Stack-specific needs should become
 profiles, such as:
@@ -40,7 +48,7 @@ profiles, such as:
 - Kubernetes or deployment-heavy service;
 - research or notebook-heavy project.
 
-## 5. Decisions Should Leave a Trail
+## 6. Decisions Should Leave a Trail
 
 When a convention becomes important, it should have a short decision record:
 
@@ -49,7 +57,7 @@ When a convention becomes important, it should have a short decision record:
 - what alternatives we rejected;
 - when it should be revisited.
 
-## 6. Local Setup Must Be Boring
+## 7. Local Setup Must Be Boring
 
 Every project should make local development predictable:
 
@@ -58,18 +66,18 @@ Every project should make local development predictable:
 - environment variables are documented without exposing secrets;
 - tests and smoke checks are easy to run.
 
-## 7. Operational Knowledge Belongs in Runbooks
+## 8. Operational Knowledge Belongs in Runbooks
 
 Debugging, deployment, recovery, data migration, and recurring maintenance
 steps should be written as runbooks, not rediscovered during incidents.
 
-## 8. The Framework Should Stay Live
+## 9. The Framework Should Stay Live
 
 This repository should evolve through small, traceable updates. New lessons
 start as discovery notes, then graduate into decisions, templates, scripts, or
 runbooks only when they are useful enough.
 
-## 9. Claims Are Not Evidence
+## 10. Claims Are Not Evidence
 
 Agentic workflows should separate implementation from verification. Builder
 summaries are useful context, but acceptance should depend on neutral evidence,

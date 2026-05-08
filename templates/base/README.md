@@ -16,10 +16,16 @@ Short description of what this project does and who it serves.
 ├── README.md
 ├── docs/
 │   ├── decisions/
+│   ├── planning/
 │   └── runbooks/
 └── scripts/
     └── validate.sh
 ```
+
+## Planning
+
+Start with `docs/planning/idea-brief.md`, then create a project plan, risk
+profile, first slices, and agent context before implementation begins.
 
 ## Development
 
@@ -43,6 +49,8 @@ When validation cannot run, record the reason and the remaining risk.
 - `README.md`: project identity, quick start, and navigation.
 - `AGENTS.md`: agent operating contract.
 - `docs/decisions/`: durable decisions and tradeoffs.
+- `docs/planning/`: idea brief, project plan, risk profile, slices, and agent
+  context.
 - `docs/runbooks/`: operational procedures.
 - `scripts/validate.sh`: stable validation entrypoint.
 

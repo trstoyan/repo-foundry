@@ -39,8 +39,9 @@ provider-specific guideline files.
 
 ## Documentation Flow
 
-1. Add raw observations with `docs/discovery/note-template.md`.
-2. Promote repeated observations into `docs/main-ideas.md` or a decision record.
-3. Convert stable patterns into files under `templates/base/` or a future
+1. Use `docs/foundry-process.md` as the lifecycle model.
+2. Add raw observations with `docs/discovery/note-template.md`.
+3. Promote repeated observations into `docs/main-ideas.md` or a decision record.
+4. Convert stable patterns into files under `templates/base/` or a future
    stack-specific profile.
-4. Update validation when a convention becomes mandatory.
+5. Update validation when a convention becomes mandatory.

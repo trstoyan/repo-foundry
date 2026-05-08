@@ -12,12 +12,28 @@ important.
 
 - `README.md`: project identity, quick start, and navigation.
 - `AGENTS.md`: agent operating contract.
+- `docs/planning/`: idea brief, project plan, risk profile, slices, and agent
+  context.
 - `docs/decisions/`: durable decisions and tradeoffs.
 - `docs/runbooks/`: repeatable operational procedures.
 - `scripts/validate.sh`: stable local validation entrypoint.
 
 If code, docs, and validation commands disagree, treat that as drift and fix it
 before reporting completion.
+
+## Planning Gate
+
+Do not start implementation from a raw idea or broad request.
+
+Before non-trivial implementation, identify or create:
+
+- an idea brief or project plan;
+- a risk profile;
+- an accepted slice with objective, scope, non-goals, acceptance criteria, and
+  validation;
+- agent context for future handoff.
+
+If these do not exist, treat the task as planning work first.
 
 ## Working Rules
 
