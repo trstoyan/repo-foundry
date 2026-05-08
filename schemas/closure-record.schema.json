@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://repo-foundry.dev/schemas/closure-record.schema.json",
+  "title": "Closure Record",
+  "description": "Auditable final record for one governed slice.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "slice_id",
+    "closed_at",
+    "outcome",
+    "evidence_packet_ref",
+    "release_decision_ref",
+    "commands",
+    "changed_files"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "closure-record.v1"
+    },
+    "slice_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "closed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "accepted",
+        "blocked",
+        "deferred",
+        "superseded"
+      ]
+    },
+    "commit": {
+      "type": "string",
+      "minLength": 7
+    },
+    "evidence_packet_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "release_decision_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command",
+          "result"
+        ],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "passed",
+              "failed",
+              "skipped"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "changed_files": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "remaining_risk": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "followups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "description"
+        ],
+        "properties": {
+          "slice_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

@@ -24,6 +24,7 @@ promote the stable ones into template assets.
 - Anonymized discovery notes from repository tours.
 - Decision records explaining why a convention exists.
 - RFCs for larger governance and architecture proposals.
+- Governance schemas for evidence, review, release, and closure records.
 - Validation scripts that enforce the conventions we trust.
 - Runbook and documentation patterns that reduce repeated confusion.
 
@@ -46,10 +47,12 @@ promote the stable ones into template assets.
 │   ├── decisions/
 │   ├── discovery/
 │   └── rfcs/
+├── schemas/
 ├── scripts/
 │   └── validate.sh
 └── templates/
-    └── base/
+    ├── base/
+    └── profiles/
 ```
 
 ## How We Will Use It
@@ -58,7 +61,7 @@ promote the stable ones into template assets.
 2. Write down anonymized lessons in `docs/discovery/`.
 3. Discuss which lessons are universal, optional, or project-specific.
 4. Promote durable lessons into `templates/base/` or future template profiles.
-5. Add validation when a rule is important enough to enforce.
+5. Add schemas or validation when a rule is important enough to enforce.
 
 The starting tour method is in `docs/repo-tour-plan.md`.
 

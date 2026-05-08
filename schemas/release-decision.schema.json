@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://repo-foundry.dev/schemas/release-decision.schema.json",
+  "title": "Release Decision",
+  "description": "Machine-readable decision for accepting, blocking, or deferring a governed slice.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "slice_id",
+    "decision",
+    "decided_at",
+    "decided_by",
+    "working_tree",
+    "guard_status",
+    "blockers"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "release-decision.v1"
+    },
+    "slice_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "accepted",
+        "blocked",
+        "deferred"
+      ]
+    },
+    "decided_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "decided_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "commit": {
+      "type": "string",
+      "minLength": 7
+    },
+    "evidence_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-fA-F0-9]{64}$"
+    },
+    "guard_status": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "fail",
+        "warning",
+        "not_run"
+      ]
+    },
+    "required_reviews": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "enum": [
+          "pass",
+          "fail",
+          "conditional",
+          "not_required",
+          "not_run"
+        ]
+      }
+    },
+    "blockers": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "working_tree": {
+      "type": "string",
+      "enum": [
+        "clean",
+        "dirty"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "required_action": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "manual_approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "status"
+      ],
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "approved",
+            "rejected",
+            "not_required",
+            "pending"
+          ]
+        },
+        "approved_by": {
+          "type": "string"
+        },
+        "approved_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

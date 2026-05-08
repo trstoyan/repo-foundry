@@ -1,0 +1,203 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://repo-foundry.dev/schemas/evidence-packet.schema.json",
+  "title": "Evidence Packet",
+  "description": "Neutral, mechanically collected evidence for one governed slice.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "slice_id",
+    "generated_at",
+    "base_ref",
+    "head_ref",
+    "contract",
+    "git",
+    "commands",
+    "diffs"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "evidence-packet.v1"
+    },
+    "slice_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "base_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "head_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "objective",
+        "acceptance_criteria"
+      ],
+      "properties": {
+        "objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "allowed_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "acceptance_criteria": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required_checks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "git": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "changed_files"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "clean",
+            "dirty"
+          ]
+        },
+        "commits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 7
+          }
+        },
+        "changed_files": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "command",
+          "exit_code"
+        ],
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exit_code": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "raw_output_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "started_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "finished_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "diffs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stat_ref",
+        "full_diff_ref"
+      ],
+      "properties": {
+        "stat_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "full_diff_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "ref"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "builder_note": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "trust_level",
+        "content"
+      ],
+      "properties": {
+        "trust_level": {
+          "type": "string",
+          "const": "untrusted"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
