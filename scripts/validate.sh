@@ -5,6 +5,7 @@ required_files=(
   "AGENTS.md"
   ".github/FUNDING.yml"
   "README.md"
+  "START_HERE.md"
   "docs/main-ideas.md"
   "docs/foundry-process.md"
   "docs/repo-tour-plan.md"
@@ -12,6 +13,7 @@ required_files=(
   "docs/rfcs/0001-stateless-governance-agents.md"
   "docs/guides/README.md"
   "docs/guides/idea-to-plan.md"
+  "docs/guides/prompts.md"
   "schemas/README.md"
   "schemas/evidence-packet.schema.json"
   "schemas/review-result.schema.json"
@@ -38,6 +40,7 @@ required_files=(
   "templates/base/docs/planning/slice-template.md"
   "templates/base/docs/planning/agent-context.md"
   "templates/base/docs/runbooks/README.md"
+  "scripts/next_steps.sh"
   "scripts/new_project.sh"
   "templates/base/scripts/validate.sh"
   "templates/profiles/README.md"
@@ -75,6 +78,11 @@ fi
 
 if [[ ! -x "scripts/new_project.sh" ]]; then
   echo "Expected executable script: scripts/new_project.sh" >&2
+  exit 1
+fi
+
+if [[ ! -x "scripts/next_steps.sh" ]]; then
+  echo "Expected executable script: scripts/next_steps.sh" >&2
   exit 1
 fi
 

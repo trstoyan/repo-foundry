@@ -12,6 +12,8 @@ that helps future projects start with clear operating rules, useful validation,
 decision records, runbooks, and human-plus-AI collaboration practices that have
 already survived real work.
 
+New here? Start with `START_HERE.md`.
+
 ## Current Status
 
 Foundation created. The repo is ready to collect discoveries, discuss them, and
@@ -22,6 +24,7 @@ promote the stable ones into template assets.
 Create a new project from the base template:
 
 ```sh
+./scripts/next_steps.sh
 ./scripts/new_project.sh /tmp/my-new-project "My New Project"
 cd /tmp/my-new-project
 ./scripts/validate.sh
@@ -63,6 +66,7 @@ See `examples/idea-to-plan/` for a filled planning example.
 .
 ├── AGENTS.md
 ├── README.md
+├── START_HERE.md
 ├── docs/
 │   ├── main-ideas.md
 │   ├── foundry-process.md
@@ -74,6 +78,7 @@ See `examples/idea-to-plan/` for a filled planning example.
 ├── schemas/
 ├── examples/
 ├── scripts/
+│   ├── next_steps.sh
 │   ├── new_project.sh
 │   └── validate.sh
 └── templates/

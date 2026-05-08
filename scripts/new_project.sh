@@ -72,4 +72,8 @@ Next steps:
   cd "${target_dir}"
   ./scripts/validate.sh
   edit docs/planning/idea-brief.md
+
+First AI prompt:
+  I am using Repo Foundry. Read AGENTS.md and docs/planning/idea-brief.md.
+  Help me clarify this idea into a project plan. Do not implement anything yet.
 EOF
