@@ -3,6 +3,7 @@ set -euo pipefail
 
 required_files=(
   "AGENTS.md"
+  ".github/FUNDING.yml"
   "README.md"
   "docs/main-ideas.md"
   "docs/repo-tour-plan.md"

@@ -1,5 +1,7 @@
 # Repo Foundry
 
+[![Support the Project](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-yellow.svg)](https://buymeacoffee.com/trstoyan)
+
 Agent-ready repository templates and operational playbooks.
 
 This repository is the starting point for a reusable project template and a
@@ -57,6 +59,11 @@ promote the stable ones into template assets.
 5. Add validation when a rule is important enough to enforce.
 
 The starting tour method is in `docs/repo-tour-plan.md`.
+
+## Support
+
+If Repo Foundry helps you build better projects, you can support the work on
+[Buy Me a Coffee](https://buymeacoffee.com/trstoyan).
 
 ## License
 
