@@ -21,8 +21,9 @@ promote the stable ones into template assets.
 
 - Project-start templates that can be reused for new repositories.
 - AI-agent collaboration rules that are useful across many projects.
-- Discovery notes from repository tours.
+- Anonymized discovery notes from repository tours.
 - Decision records explaining why a convention exists.
+- RFCs for larger governance and architecture proposals.
 - Validation scripts that enforce the conventions we trust.
 - Runbook and documentation patterns that reduce repeated confusion.
 
@@ -43,7 +44,8 @@ promote the stable ones into template assets.
 │   ├── main-ideas.md
 │   ├── repo-tour-plan.md
 │   ├── decisions/
-│   └── discovery/
+│   ├── discovery/
+│   └── rfcs/
 ├── scripts/
 │   └── validate.sh
 └── templates/
@@ -53,7 +55,7 @@ promote the stable ones into template assets.
 ## How We Will Use It
 
 1. Tour an existing project.
-2. Write down concrete lessons in `docs/discovery/`.
+2. Write down anonymized lessons in `docs/discovery/`.
 3. Discuss which lessons are universal, optional, or project-specific.
 4. Promote durable lessons into `templates/base/` or future template profiles.
 5. Add validation when a rule is important enough to enforce.

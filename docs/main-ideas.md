@@ -69,3 +69,8 @@ This repository should evolve through small, traceable updates. New lessons
 start as discovery notes, then graduate into decisions, templates, scripts, or
 runbooks only when they are useful enough.
 
+## 9. Claims Are Not Evidence
+
+Agentic workflows should separate implementation from verification. Builder
+summaries are useful context, but acceptance should depend on neutral evidence,
+deterministic checks, independent review, and auditable closure records.

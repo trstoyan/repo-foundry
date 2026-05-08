@@ -7,6 +7,8 @@ required_files=(
   "README.md"
   "docs/main-ideas.md"
   "docs/repo-tour-plan.md"
+  "docs/rfcs/README.md"
+  "docs/rfcs/0001-stateless-governance-agents.md"
   "docs/discovery/README.md"
   "docs/discovery/note-template.md"
   "docs/decisions/0001-start-as-repo-foundry.md"

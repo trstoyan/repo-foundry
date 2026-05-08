@@ -1,7 +1,7 @@
-# Discovery Note: <project> / <topic>
+# Discovery Note: <archetype> / <topic>
 
 Date: YYYY-MM-DD
-Project: `<project-directory>`
+Project Archetype: <archetype>
 Status: raw
 
 ## Context
@@ -22,11 +22,10 @@ What reusable rule, file, script, check, or workflow might come from this?
 
 ## Evidence
 
-- Files inspected:
+- File types inspected:
 - Commands run:
-- Related project behavior:
+- Related behavior:
 
 ## Decision
 
 Keep as raw, promote to candidate, adopt into the framework, or reject.
-

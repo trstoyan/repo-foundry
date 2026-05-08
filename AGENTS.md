@@ -15,8 +15,10 @@ templates, operating rules, scripts, and runbooks.
 
 - Keep this repository documentation-first until a pattern has been observed in
   real projects.
-- Do not copy entire files from other projects unless the source project is
-  named and the content is intentionally generalized.
+- Public docs must describe source projects by archetype, not by private
+  repository name or local path.
+- Do not copy entire files from source projects unless the content is
+  intentionally generalized and safe to publish.
 - Record lessons in `docs/discovery/` before turning them into template rules.
 - Put reusable starter assets under `templates/`.
 - Put Repo Foundry maintenance scripts under `scripts/`.
