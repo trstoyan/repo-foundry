@@ -19,6 +19,8 @@ New here? Start with `START_HERE.md`.
 Foundation created. The repo is ready to collect discoveries, discuss them, and
 promote the stable ones into template assets.
 
+The active follow-up backlog is tracked in `docs/roadmap.md`.
+
 ## Start In 10 Minutes
 
 Create a new project from the base template:
@@ -70,6 +72,7 @@ See `examples/idea-to-plan/` for a filled planning example.
 ├── docs/
 │   ├── main-ideas.md
 │   ├── foundry-process.md
+│   ├── roadmap.md
 │   ├── repo-tour-plan.md
 │   ├── decisions/
 │   ├── discovery/

@@ -8,6 +8,7 @@ required_files=(
   "START_HERE.md"
   "docs/main-ideas.md"
   "docs/foundry-process.md"
+  "docs/roadmap.md"
   "docs/repo-tour-plan.md"
   "docs/rfcs/README.md"
   "docs/rfcs/0001-stateless-governance-agents.md"
