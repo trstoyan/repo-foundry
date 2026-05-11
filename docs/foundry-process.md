@@ -81,6 +81,7 @@ Choose optional profiles only when the project needs them.
 Available profiles:
 
 - docs governance;
+- API contract governance;
 - evidence review;
 - high-risk runtime;
 - multi-agent worktree ownership.
@@ -208,4 +209,3 @@ Before a slice is accepted, the project should have:
 - documentation updates or explanation;
 - remaining risks;
 - follow-up slices or explicit no-follow-up note.
-

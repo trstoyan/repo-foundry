@@ -12,6 +12,8 @@ model.
 
 - `docs-governance`: source-of-truth documents, drift rules, and documentation
   authority.
+- `api-contract-governance`: producer/consumer API contract ownership,
+  propagation rules, and executable drift checks.
 - `evidence-review`: evidence packets, deterministic gates, stateless reviews,
   release decisions, and closure records.
 - `high-risk-runtime`: extra controls for systems where changes can affect
@@ -28,6 +30,14 @@ Use `docs-governance` when:
 - documentation drift has caused incorrect work;
 - the project has long-running plans or frequent behavior changes.
 
+Use `api-contract-governance` when:
+
+- backend/API producers and frontend, SDK, CLI, worker, or integration
+  consumers can change independently;
+- route, schema, or payload drift has caused integration risk;
+- validation should fail when production consumer references are not backed by
+  the producer contract source.
+
 Use `evidence-review` when:
 
 - builder claims are not enough to accept work;
@@ -43,4 +53,3 @@ Use `multi-agent-worktree` when:
 
 - more than one agent or operator may mutate the project in parallel;
 - long-running slices need handoff and ownership records.
-
