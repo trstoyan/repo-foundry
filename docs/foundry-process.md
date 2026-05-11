@@ -91,6 +91,11 @@ Rule:
 Use profiles as overlays, not as default complexity.
 ```
 
+For existing projects, profile selection must include an entrypoint pass. Update
+the active agent instructions, human onboarding docs, validation scripts, and
+source-of-truth mapping so the selected profiles are visible to future agents.
+Use `docs/guides/adopting-existing-project.md`.
+
 ## Phase 5: Slices
 
 Convert the plan into small, testable implementation slices.
@@ -197,6 +202,9 @@ Before implementation begins, the project should have:
 - at least one accepted slice;
 - validation expectations;
 - agent context.
+
+For existing projects, the gate also includes updated project entrypoints for
+the selected profiles.
 
 ## Minimum Closeout Gate
 

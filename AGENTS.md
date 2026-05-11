@@ -20,6 +20,11 @@ templates, operating rules, scripts, and runbooks.
 - Do not copy entire files from source projects unless the content is
   intentionally generalized and safe to publish.
 - Record lessons in `docs/discovery/` before turning them into template rules.
+- When contributing a learned lesson, follow `docs/guides/contributing-lessons.md`
+  and include evidence from repository state or command output.
+- When adapting Repo Foundry to an existing project, follow
+  `docs/guides/adopting-existing-project.md` and update the project's active
+  agent and human entrypoints, not only new governance docs.
 - Put reusable starter assets under `templates/`.
 - Put Repo Foundry maintenance scripts under `scripts/`.
 - Do not add provider-specific agent files such as `CLAUDE.md`, `GEMINI.md`,

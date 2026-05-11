@@ -9,8 +9,12 @@ Read these in order:
 
 1. `docs/foundry-process.md`
 2. `docs/guides/idea-to-plan.md`
-3. `docs/guides/prompts.md`
-4. `examples/idea-to-plan/README.md`
+3. `docs/guides/adopting-existing-project.md` if you are applying Repo Foundry
+   to a repository that already exists.
+4. `docs/guides/contributing-lessons.md` if you are feeding lessons back into
+   Repo Foundry.
+5. `docs/guides/prompts.md`
+6. `examples/idea-to-plan/README.md`
 
 The main idea:
 
@@ -43,6 +47,18 @@ Help me clarify this idea into a project plan. Do not implement anything yet.
 ```
 
 More prompts are in `docs/guides/prompts.md`.
+
+## If You Are Adopting An Existing Project
+
+Do an entrypoint pass before implementation. Update the project's `AGENTS.md`
+or equivalent agent contract, human onboarding docs, validation scripts, and
+selected profile references together.
+
+Use:
+
+```text
+docs/guides/adopting-existing-project.md
+```
 
 ## When Planning Is Ready
 
